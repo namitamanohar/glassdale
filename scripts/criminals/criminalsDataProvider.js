@@ -21,3 +21,5 @@ export const getCriminals = () => {
             }
         )
 }
+// this API returned an array slice is an array method 
+
