@@ -24,6 +24,12 @@ console.log("this is the criminal list component")
 
 
   })
+// needs to listen here 
+  eventHub.addEventListener("buttonSelected", event=>{
+    
+
+    
+  })
 
   const render = (crimeCollection) =>{
     contentElement.innerHTML = `
@@ -38,7 +44,7 @@ console.log("this is the criminal list component")
     `
   }
 
-  // render(appStateCriminals)
+  render(appStateCriminals)
 }
 
 export default criminalListComponent 

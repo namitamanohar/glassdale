@@ -6,6 +6,16 @@ const criminalComponent = (criminal) => {
     <div class="criminalCard__crime">Conviction: ${criminal.conviction}</div>
     <div class="criminalCard__termStart">Term Start: ${new Date(criminal.incarceration.start).toLocaleDateString('en-US')}</div>
     <div class="criminalCard__termEnd">Term End: ${new Date(criminal.incarceration.end).toLocaleDateString('en-US')}</div>
+  <div class="associatesButton">
+    <button id="button--${criminal.name.split(" ").join("-")}">Known Associates</button>
+    <dialog class='dialog--known_associates' id='details--${criminal.name}'>
+      <h3>Known Associates</h3>
+      <div class="dialog__name">${criminal.known_associates.map((ass) =>{return ass.name}).join(", ")}</div>
+      <h3>Alibi</h3>
+      <div class="dialog__alibi">${criminal.known_associates.map((ass)=>{return ass.alibi}).join(", ")}</div>
+      <button class='button--close' id='close-${criminal.known_associates}'>Close Dialog</button>
+    </dialog>
+  </div>
   </section>
   `
 }

@@ -1,0 +1,12 @@
+.pastNotesContainer{
+  display: flex; 
+  flex: wrap; 
+
+}
+.noteCard{
+  border: 1px greenyellow dotted; 
+  flex-basis: 20%;
+  margin: 10px; 
+  padding: 10px; 
+
+}

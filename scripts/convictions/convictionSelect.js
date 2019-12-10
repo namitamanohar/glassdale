@@ -16,7 +16,7 @@ const ConvictionSelect = () => {
     eventHub.addEventListener("change", changeEvent=>{
       if(changeEvent.target.id==="crimeSelect"){
         const selectedCrime=changeEvent.target.value
-
+// make custom event to talk to other components 
         const crimeNameMessage=new CustomEvent("crimeSelected",{
           detail: {
             crime: selectedCrime
@@ -34,7 +34,7 @@ const ConvictionSelect = () => {
                 <option value="0">Please select a crime...</option>
                 ${
                   convictions.map(conviction =>
-                      `<option class="crime">${conviction}</option>`
+                      `<option class="crime" value="${conviction}">${conviction}</option>`
                   )
               }
             </select>
