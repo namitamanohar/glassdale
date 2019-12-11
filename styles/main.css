@@ -1,3 +1,8 @@
 @import "criminals.css";
 @import "convictions.css";
-@import "notes.css"
+@import "notes.css"; 
+@import "witnesses.css"; 
+
+body{
+  background-color:rgb(205, 223, 241);
+}

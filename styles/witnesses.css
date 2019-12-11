@@ -1,0 +1,13 @@
+.criminalsContainer{
+  display:flex; 
+  flex-wrap: wrap;
+}
+
+
+.witnessCard{
+  flex-basis: 25%;
+  border: 1px goldenrod dashed; 
+  margin: 10px; 
+  padding: 10px; 
+}
+

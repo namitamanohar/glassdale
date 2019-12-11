@@ -14,12 +14,10 @@ const NoteFormComponent = () => {
         // Make a new object representation of a note
         const newNote = {
             // Key/value pairs here
-          
-              "noteText":document.querySelector("#note-text").value,
-              "dateOfNote":document.querySelector("#date-of-note").value,
-              "suspectName":document.querySelector("#suspect-name").value
-            
-          
+            "noteText":document.querySelector("#note-text").value,
+            "dateOfNote":document.querySelector("#date-of-note").value,
+            "suspectName":document.querySelector("#suspect-name").value
+               
         }
 
         // Change API state and application state
@@ -35,6 +33,8 @@ eventHub.addEventListener("click", clickEvent =>{
   }
 })
 
+
+
     const render = () => {
         contentTarget.innerHTML = `
           <label for="date-of-note">Date</label>
@@ -45,6 +45,7 @@ eventHub.addEventListener("click", clickEvent =>{
           <input type="text" id="suspect-name" placeholder="Suspect Name">
           <button id="saveNote">Save Note</button>
           <button id="showNotes">Show All Notes</button>
+          <button id="showWitnesses">Show All Witnesses</button>
         `
     }
 

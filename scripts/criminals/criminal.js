@@ -8,7 +8,7 @@ const criminalComponent = (criminal) => {
     <div class="criminalCard__termEnd">Term End: ${new Date(criminal.incarceration.end).toLocaleDateString('en-US')}</div>
   <div class="associatesButton">
     <button id="button--${criminal.name.split(" ").join("-")}">Known Associates</button>
-    <dialog class='dialog--known_associates' id='details--${criminal.name}'>
+    <dialog class='dialog--known_associates' id='details--${criminal.name.split(" ").join("-")}'>
       <h3>Known Associates</h3>
       <div class="dialog__name">${criminal.known_associates.map((ass) =>{return ass.name}).join(", ")}</div>
       <h3>Alibi</h3>

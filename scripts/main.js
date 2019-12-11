@@ -6,6 +6,8 @@ import NoteFormComponent from "./notes/noteForm.js";
 import { getNotes } from "./notes/noteDataProvider.js";
 import noteList from "./notes/noteList.js";
 import initializeAssociatesButtonEvents from "./criminals/criminalDialogs.js";
+import { getWitnesses } from "./witnesses/witnessDataProvider.js";
+import witnessListComponent from "./witnesses/witnessList.js";
 
 NoteFormComponent()
 
@@ -13,15 +15,19 @@ getCriminals().then(
   ()=>criminalListComponent()
   ).then(
     () =>initializeAssociatesButtonEvents()
-  )
+    )
   
 getConvictions().then(
   ()=>ConvictionSelect()
   )
 
-getNotes().then(
+  getNotes().then(
   () => noteList()
 )
-  // criminalListComponent is also called a callback function
+
+getWitnesses().then(
+  ()=>witnessListComponent()
+)
+// criminalListComponent is also called a callback function
 
  

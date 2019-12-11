@@ -24,11 +24,17 @@ console.log("this is the criminal list component")
 
 
   })
-// needs to listen here 
-  eventHub.addEventListener("buttonSelected", event=>{
-    
 
-    
+  eventHub.addEventListener("click", event =>{
+    if(event.target.id.startsWith("button--")){
+      const dialogSiblingSelector = `#${event.target.id}+dialog`
+            const theDialog = document.querySelector(dialogSiblingSelector)
+            theDialog.showModal()
+    }
+    if(event.target.classList.contains("button--close")){
+      const dialogElement = event.target.parentNode
+              dialogElement.close()
+    }
   })
 
   const render = (crimeCollection) =>{

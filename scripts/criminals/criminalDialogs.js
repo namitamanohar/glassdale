@@ -1,3 +1,5 @@
+
+
 const initializeAssociatesButtonEvents = () => {
   // CAN'T TOUCH THIS - START
   const CloseButtons = document.querySelectorAll(".button--close")
@@ -11,14 +13,6 @@ const initializeAssociatesButtonEvents = () => {
           }
       )
   }
-const eventHub=document.querySelector(".container")
-eventHub.addEventListener("click", clickEvent=>{
-  if(clickEvent.target.id.startsWith("button--")){
-
-    const message= new CustomEvent("buttonSelected")
-    eventHub.dispatchEvent(message)
-  }
-})
 
 
 
@@ -30,7 +24,6 @@ for (const btn of allDetailButtons) {
         theEvent => {
             const dialogSiblingSelector = `#${theEvent.target.id}+dialog`
             const theDialog = document.querySelector(dialogSiblingSelector)
-            console.log(dialogSiblingSelector)
             theDialog.showModal()
         }
     )
