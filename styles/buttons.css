@@ -1,0 +1,40 @@
+.buttonBorderLine{
+  border: 5px solid rgb(77, 130, 201);
+  border-radius: 3px;
+}
+
+#saveNote{
+  border-radius: 12px; 
+
+}
+
+#hideNote{
+  border-radius: 12px
+}
+#showWitnesses{
+  border-radius: 12px
+}
+#showNotes{
+  border-radius: 12px
+
+}
+.buttonGroup{
+  display:flex; 
+  flex:wrap; 
+  justify-content: space-around;
+}
+[id^="associates--"]{
+  margin:10px; 
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  font-size: 20px; 
+  
+  
+}
+
+
+[id^="associates--"]:hover {
+  background-color: rgb(66, 71, 66); /* Green */
+  color: white;
+}

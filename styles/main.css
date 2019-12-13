@@ -2,7 +2,11 @@
 @import "convictions.css";
 @import "notes.css"; 
 @import "witnesses.css"; 
+@import "buttons.css"; 
+@import "dialogs.css";
 
 body{
-  background-color:rgb(205, 223, 241);
+  background-color:rgb(233, 231, 222);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
 }

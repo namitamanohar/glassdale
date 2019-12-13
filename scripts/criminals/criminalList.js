@@ -1,4 +1,4 @@
-import { useCriminals } from "./criminalsDataProvider.js";
+import { useCriminals, getCriminals } from "./criminalsDataProvider.js";
 import criminalComponent from "./criminal.js";
 
 const eventHub = document.querySelector(".container")
@@ -36,6 +36,19 @@ console.log("this is the criminal list component")
               dialogElement.close()
     }
   })
+
+  eventHub.addEventListener("change", changeEvent =>{
+      if(changeEvent.target.value==="showAll"){
+        getCriminals().then(
+          () => {
+            const criminals=useCriminals()
+            render(criminals)
+          }
+          )
+
+      }
+  })
+
 
   const render = (crimeCollection) =>{
     contentElement.innerHTML = `

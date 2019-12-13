@@ -1,5 +1,4 @@
 
-
 const initializeAssociatesButtonEvents = () => {
   // CAN'T TOUCH THIS - START
   const CloseButtons = document.querySelectorAll(".button--close")
@@ -15,8 +14,7 @@ const initializeAssociatesButtonEvents = () => {
   }
 
 
-
-const allDetailButtons = document.querySelectorAll("button[id^='button--']")
+const allDetailButtons = document.querySelectorAll("button[id^='associates--']")
 console.log(allDetailButtons)
 for (const btn of allDetailButtons) {
     btn.addEventListener(

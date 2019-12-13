@@ -1,12 +1,6 @@
 {
   "notes": [
     {
-      "noteText": "blah blah",
-      "dateOfNote": "1/1//2020",
-      "suspectName": "Steve",
-      "id": 1
-    },
-    {
       "noteText": "this criminal is suspcious",
       "dateOfNote": "2/3/20",
       "suspectName": "Rogelio Hills",
@@ -29,12 +23,6 @@
       "dateOfNote": "2/2/19",
       "suspectName": "Ashlynn",
       "id": 5
-    },
-    {
-      "noteText": "asfalsfdjaslkdfj",
-      "dateOfNote": "2019-12-12",
-      "suspectName": "Montana",
-      "id": 6
     }
   ]
 }

@@ -1,13 +1,28 @@
 .criminalsContainer{
   display:flex; 
   flex-wrap: wrap;
+  
+  justify-content: space-evenly;
+  padding: 2px 16px;
+  align-items: stretch;
 }
 
 
 .witnessCard{
-  flex-basis: 25%;
-  border: 1px goldenrod dashed; 
+  flex-basis: 25%; 
+  border: .5px solid grey;
+  border-radius: 10px;
   margin: 10px; 
-  padding: 10px; 
+  padding: 5px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100px;
+  height: 200px; 
+  
 }
 
+.witnessCard:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}

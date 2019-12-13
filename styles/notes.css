@@ -4,9 +4,17 @@
 
 }
 .noteCard{
-  border: 1px greenyellow dotted; 
-  flex-basis: 20%;
-  margin: 10px; 
-  padding: 10px; 
+    flex-basis: 25%; 
+    border: .5px solid grey;
+    border-radius: 10px;
+    margin: 10px; 
+    padding: 5px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+  }
+  .noteCard:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
-}
+  }

@@ -24,19 +24,20 @@ const NoteFormComponent = () => {
         saveNote(newNote).then(()=>noteList())
     }
 })
-eventHub.addEventListener("click", clickEvent =>{
-  if(clickEvent.target.id==="showNotes"){
-      const message= new CustomEvent("showNoteButtonClicked")
+// eventHub.addEventListener("click", clickEvent =>{
+//   if(clickEvent.target.id==="showNotes"){
+//       const message= new CustomEvent("showNoteButtonClicked")
       
-      eventHub.dispatchEvent(message)
+//       eventHub.dispatchEvent(message)
 
-  }
-})
+//   }
+// })
 
 
 
     const render = () => {
         contentTarget.innerHTML = `
+          <hr class="buttonBorderLine">
           <label for="date-of-note">Date</label>
           <input type="date" id="date-of-note" placeholder="Date of Note">
           <label for="note-text">Note Text</label>
@@ -44,8 +45,12 @@ eventHub.addEventListener("click", clickEvent =>{
           <label for="suspect-name">Suspect Name</label>
           <input type="text" id="suspect-name" placeholder="Suspect Name">
           <button id="saveNote">Save Note</button>
+          <section class="buttonGroup">
+          <button id="hideNote">Hide Notes</button>
           <button id="showNotes">Show All Notes</button>
           <button id="showWitnesses">Show All Witnesses</button>
+          </section>
+          <hr class="buttonBorderLine">
         `
     }
 

@@ -7,16 +7,32 @@ const eventHub=document.querySelector(".container")
 const noteList = () => {
   
 
-  eventHub.addEventListener("showNoteButtonClicked", event=>{
-      getNotes().then(
-        ()=>{
-          const notes=useNotes()
-          render(notes)
-        }
-      )
-  })
-  
+  // eventHub.addEventListener("showNoteButtonClicked", event=>{
+  //     getNotes().then(
+  //       ()=>{
+  //         const notes=useNotes()
+  //         render(notes)
+  //       }
+  //     )
+  // })
 
+eventHub.addEventListener("click", clickEvent =>{
+  if(clickEvent.target.id==="showNotes"){
+    getNotes().then(
+      () => {
+        const notes=useNotes()
+        render(notes)
+      }
+    )
+  }
+})
+
+  
+eventHub.addEventListener("click", clickEvent =>{
+  if(clickEvent.target.id==="hideNote"){
+    contentElement.innerHTML=""
+  }
+})
 
   eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("deleteNote--")) {
