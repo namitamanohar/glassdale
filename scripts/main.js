@@ -8,6 +8,8 @@ import noteList from "./notes/noteList.js";
 import initializeAssociatesButtonEvents from "./criminals/criminalDialogs.js";
 import { getWitnesses } from "./witnesses/witnessDataProvider.js";
 import witnessListComponent from "./witnesses/witnessList.js";
+import { getOfficers } from "./officers/OfficerProvider.js";
+import OfficerSelect from "./officers/officersSelect.js";
 
 NoteFormComponent()
 
@@ -30,4 +32,7 @@ getWitnesses().then(
 )
 // criminalListComponent is also called a callback function
 
- 
+getOfficers().then(
+  () => OfficerSelect()
+)
+

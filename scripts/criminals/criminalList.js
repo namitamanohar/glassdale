@@ -1,6 +1,7 @@
 import { useCriminals, getCriminals } from "./criminalsDataProvider.js";
 import criminalComponent from "./criminal.js";
 
+
 const eventHub = document.querySelector(".container")
 
 const criminalListComponent = () =>{
@@ -24,6 +25,21 @@ console.log("this is the criminal list component")
 
 
   })
+
+  
+
+  eventHub.addEventListener("officerSelected", event =>{
+    const officerName=event.detail.officer
+    const filteredOfficers=appStateCriminals.filter(
+      (individualCriminal) => {
+        if(individualCriminal.arrestingOfficer===officerName){
+        return individualCriminal
+      }
+    }
+    )
+      render(filteredOfficers)
+  })
+
 
   eventHub.addEventListener("click", event =>{
     if(event.target.id.startsWith("button--")){

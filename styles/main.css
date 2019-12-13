@@ -4,6 +4,7 @@
 @import "witnesses.css"; 
 @import "buttons.css"; 
 @import "dialogs.css";
+@import "filters.css";
 
 body{
   background-color:rgb(233, 231, 222);

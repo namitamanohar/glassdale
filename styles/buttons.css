@@ -29,12 +29,26 @@
   transition-duration: 0.4s;
   border-radius: 12px;
   font-size: 20px; 
-  
-  
 }
 
 
 [id^="associates--"]:hover {
   background-color: rgb(66, 71, 66); /* Green */
   color: white;
+}
+[id^="deleteNote--"]{
+  margin:10px; 
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  font-size: 20px; 
+  
+}
+[id^="editNote--"]{
+  margin:10px; 
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  font-size: 20px; 
+
 }
