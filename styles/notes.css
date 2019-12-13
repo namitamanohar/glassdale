@@ -4,6 +4,10 @@
 
 
 }
+.noteFormGroup{
+  display: flex;
+  flex-wrap: wrap;
+}
 .noteCard{
     flex-basis: 25%; 
     border: .5px solid grey;
